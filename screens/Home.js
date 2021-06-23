@@ -6,7 +6,8 @@ import {
     Image,
     SafeAreaView,
     TextInput,
-    FlatList
+    FlatList,
+    Button
 } from 'react-native';
 
 import { COLORS, SIZES, icons, images, dummyData } from '../constants'
@@ -34,7 +35,7 @@ const Home = ({ navigation }) => {
                         fontSize: SIZES.h2
                     }}
                     >
-                        Hello User!!
+                        Hello User
                     </Text>
                     <Text style={{
                         marginTop: 3,
@@ -42,12 +43,12 @@ const Home = ({ navigation }) => {
                         fontSize: SIZES.body3
                     }}
                     >
-                        What do you want to today?
+                        What would you like to cook for your child today?
                     </Text>
                 </View>
                 <TouchableOpacity onPress={() => console.log('Profile')} >
                     <Image
-                        source={images.profile}
+                        source={images.momandchild}
                         style={{
                             width: 40,
                             height: 40,
@@ -131,7 +132,7 @@ const Home = ({ navigation }) => {
                             fontSize: SIZES.body4
                         }}
                     >
-                        You have 12 recipe that you havent tried yet
+                        There are 9 recipes.
                     </Text>
                     <TouchableOpacity
                         style={{
@@ -171,7 +172,7 @@ const Home = ({ navigation }) => {
                 </Text>
 
                 <FlatList
-                    data={dummyData.trendingRecipes}
+                    data={dummyData.bookMarkRecipe}
                     horizontal
                     showsHorizontalScrollIndicator={false}
                     keyExtractor={item => `${item.id}`}
@@ -208,11 +209,14 @@ const Home = ({ navigation }) => {
                 >
                     Categories
                 </Text>
-
+                <Button
+                title="Buton"
+                onPress={() => navigation.replace("Category")}
+                ></Button>        
                 <TouchableOpacity>
                     <Text
                         style={{
-                            color: COLORS.gray,
+                            color: COLORS.black,
                             fontSize: SIZES.body4
                         }}
                     >

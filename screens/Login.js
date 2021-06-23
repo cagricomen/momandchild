@@ -16,7 +16,7 @@ const Login = ({ navigation }) => {
     function renderHeader() {
         return (
             <View style={{ height: SIZES.height > 700 ? "65%" : "60%" }} >
-                <ImageBackground source={images.loginBackground}
+                <ImageBackground source={images.background}
                     style={{ flex: 1, justifyContent: 'flex-end' }}
                     resizeMode='cover'>
                     <LinearGradient start={{ x: 0, y: 0 }}
@@ -28,7 +28,7 @@ const Login = ({ navigation }) => {
                         style={{ height: 200, justifyContent: 'flex-end', paddingHorizontal: SIZES.padding }}
                     >
                         <Text style={{ width: '80%', color: COLORS.white, fontSize: SIZES.largeTitle, lineHeight: 45 }} >
-                            Infant Formula
+                            Mom and Baby
                         </Text>
                     </LinearGradient>
 

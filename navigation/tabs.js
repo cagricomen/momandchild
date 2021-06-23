@@ -23,7 +23,7 @@ const Tabs = () => {
                     elevation: 0,
                     backgroundColor: COLORS.white,
                     borderTopColor: 'transparent',
-                    height: 100
+                    height: 90
                 }
             }}
         >

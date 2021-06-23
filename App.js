@@ -1,5 +1,5 @@
 import React from 'react';
-import { Login, Recipe } from "./screens";
+import { Login, Recipe , Category, CategoryScreen} from "./screens";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -27,6 +27,14 @@ const App = () => {
                 <Stack.Screen
                     name="Recipe"
                     component={Recipe}
+                />
+                <Stack.Screen 
+                    name="Category"
+                    component={Category}
+                />
+                <Stack.Screen 
+                    name="CategoryScreen"
+                    component={CategoryScreen}
                 />
             </Stack.Navigator>
         </NavigationContainer>
