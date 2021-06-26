@@ -62,6 +62,7 @@ const months8 = require("../assets/icons/months8.jpg")
 const months12 = require("../assets/icons/months12.jpg")
 const tick = require("../assets/icons/tick.png")
 const danger = require("../assets/icons/danger.png")
+const advice = require("../assets/icons/advice.png")
 export default {
     bookmark,
     danger,
@@ -126,5 +127,6 @@ export default {
     eriste,
     months6,
     months8,
-    months12
+    months12,
+    advice
 }

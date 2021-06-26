@@ -42,7 +42,7 @@ const Category = ({ navigation }) => {
                         ]}
                         style={{ height: 200, justifyContent: 'flex-end', paddingHorizontal: SIZES.padding }}
                     >
-                        <Text style={{ width: '80%', color: COLORS.white, fontSize: SIZES.largeTitle, lineHeight: 45, marginBottom: 85 }} >
+                        <Text style={{ width: '80%', color: COLORS.white, fontSize: SIZES.largeTitle, lineHeight: 45, marginBottom: 85, marginLeft:35 }} >
                             All Categories
                         </Text>
                     </LinearGradient>
@@ -51,7 +51,9 @@ const Category = ({ navigation }) => {
                 </ImageBackground>
             </View>
             <View style={{ height: "60%" }}>
-                <TouchableOpacity style={{ height: "33%", borderRadius: 15 }}>
+                <TouchableOpacity style={{ height: "33%", borderRadius: 15 }}
+                    onPress={() => navigation.navigate('CategoryScreen6')}
+                >
                     <ImageBackground source={icons.months6}
                         style={{ flex: 1, justifyContent: 'flex-end', marginTop: 5, }}
                         resizeMode='cover'>
@@ -59,7 +61,7 @@ const Category = ({ navigation }) => {
                             end={{ x: 0, y: 1 }}
                             colors={[
                                 COLORS.transparent,
-                                COLORS.black
+                                COLORS.transparentBlack9
                             ]}
                             style={{ height: 200, justifyContent: 'flex-end', paddingHorizontal: SIZES.padding }}
                         >
@@ -71,7 +73,9 @@ const Category = ({ navigation }) => {
 
                     </ImageBackground>
                 </TouchableOpacity>
-                <TouchableOpacity style={{ height: "33%" }}>
+                <TouchableOpacity style={{ height: "33%" }}
+                    onPress={() => navigation.navigate('CategoryScreen8')}
+                >
                     <ImageBackground source={icons.months8}
                         style={{ flex: 1, justifyContent: 'flex-end', marginTop: 5, }}
                         resizeMode='cover'>
@@ -79,7 +83,7 @@ const Category = ({ navigation }) => {
                             end={{ x: 0, y: 1 }}
                             colors={[
                                 COLORS.transparent,
-                                COLORS.black
+                                COLORS.transparentBlack9
                             ]}
                             style={{ height: 200, justifyContent: 'flex-end', paddingHorizontal: SIZES.padding }}
                         >
@@ -93,7 +97,7 @@ const Category = ({ navigation }) => {
 
                 </TouchableOpacity>
                 <TouchableOpacity style={{ height: "33%" }}
-                    onPress={()=>  navigation.navigate('CategoryScreen')}
+                    onPress={() => navigation.navigate('CategoryScreen12')}
                 >
                     <ImageBackground source={icons.months12}
                         style={{ flex: 1, justifyContent: 'flex-end', marginTop: 5, }}
@@ -102,7 +106,7 @@ const Category = ({ navigation }) => {
                             end={{ x: 0, y: 1 }}
                             colors={[
                                 COLORS.transparent,
-                                COLORS.black
+                                COLORS.transparentBlack9
                             ]}
                             style={{ height: 200, justifyContent: 'flex-end', paddingHorizontal: SIZES.padding }}
                         >

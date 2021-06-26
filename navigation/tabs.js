@@ -4,7 +4,7 @@ import {
 } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { COLORS, icons } from '../constants'
-import { Home } from "../screens"
+import { Home, Category } from "../screens"
 import {TabIcon} from '../components/'
 
 
@@ -38,7 +38,7 @@ const Tabs = () => {
                 name="Search"
                 component={Home}
                 options={{
-                    tabBarIcon: ({ focused }) => <TabIcon focused={focused} icon={icons.search} />
+                    tabBarIcon: ({ focused }) => <TabIcon focused={focused} icon={icons.advice} />
                 }}
             />
             <Tab.Screen

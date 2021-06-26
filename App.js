@@ -1,5 +1,5 @@
 import React from 'react';
-import { Login, Recipe , Category, CategoryScreen} from "./screens";
+import { Login, Recipe , Category, CategoryScreen12, CategoryScreen8, CategoryScreen6} from "./screens";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -33,8 +33,16 @@ const App = () => {
                     component={Category}
                 />
                 <Stack.Screen 
-                    name="CategoryScreen"
-                    component={CategoryScreen}
+                    name="CategoryScreen12"
+                    component={CategoryScreen12}
+                />
+                <Stack.Screen 
+                    name="CategoryScreen8"
+                    component={CategoryScreen8}
+                />
+                <Stack.Screen 
+                    name="CategoryScreen6"
+                    component={CategoryScreen6}
                 />
             </Stack.Navigator>
         </NavigationContainer>

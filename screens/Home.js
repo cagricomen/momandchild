@@ -5,9 +5,9 @@ import {
     TouchableOpacity,
     Image,
     SafeAreaView,
-    TextInput,
     FlatList,
-    Button
+    Button,
+    TextInput
 } from 'react-native';
 
 import { COLORS, SIZES, icons, images, dummyData } from '../constants'
@@ -60,36 +60,74 @@ const Home = ({ navigation }) => {
             </View>
         )
     }
-
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
     function renderSearchBar() {
+        var randNum = getRandomInt(0, 3)
+        console.log(randNum)
+
         return (
             <View
                 style={{
                     flexDirection: 'row',
                     height: 50,
                     alignItems: 'center',
-                    marginHorizontal: SIZES.padding,
-                    paddingHorizontal: SIZES.padding,
-                    borderRadius: 10,
-                    backgroundColor: COLORS.lightGray
+                    marginLeft: 15
                 }}
             >
-                <Image
-                    source={icons.search}
+
+                <TouchableOpacity
                     style={{
-                        width: 20,
-                        height: 20,
-                        tintColor: COLORS.gray
+                        marginHorizontal: 5,
+                        borderRadius: 10,
+                        backgroundColor: COLORS.darkLime,
+                        height: 35,
+                        width: '25%'
                     }}
-                />
-                <TextInput
+                    onPress={() => navigation.navigate('Recipe', { recipe: dummyData.category6[randNum] })}
+                >
+                    <Text
+                        style={{
+                            marginLeft: 15,
+                            color: COLORS.white
+                        }}
+                    >6+ Ay Tavsiye</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
                     style={{
-                        marginLeft: SIZES.radius,
-                        fontSize: SIZES.body3
+                        marginHorizontal: 5,
+                        borderRadius: 10,
+                        backgroundColor: COLORS.darkLime,
+                        height: 35,
+                        width: '25%'
                     }}
-                    placeholderTextColor={COLORS.gray}
-                    placeholder='Search Recipes'
-                />
+                    onPress={() => navigation.navigate('Recipe', { recipe: dummyData.category8[randNum] })}
+                >
+                    <Text
+                        style={{
+                            marginLeft: 15,
+                            color: COLORS.white
+                        }}
+                    >8+ Ay Tavsiye</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={{
+                        marginHorizontal: 5,
+                        borderRadius: 10,
+                        backgroundColor: COLORS.darkLime,
+                        height: 35,
+                        width: '25%'
+                    }}
+                    onPress={() => navigation.navigate('Recipe', { recipe: dummyData.category12[randNum] })}
+                >
+                    <Text
+                        style={{
+                            marginLeft: 15,
+                            color: COLORS.white
+                        }}
+                    >12+ Ay Tavsiye</Text>
+                </TouchableOpacity>
             </View>
         )
     }
@@ -138,7 +176,7 @@ const Home = ({ navigation }) => {
                         style={{
                             marginTop: 10
                         }}
-                        onPress={() => console.log('See Recipes')}
+                        onPress={() => navigation.navigate('Category')}
                     >
                         <Text
                             style={{
@@ -201,27 +239,28 @@ const Home = ({ navigation }) => {
                     marginHorizontal: SIZES.padding
                 }}
             >
-                <Text
+                <TouchableOpacity
                     style={{
                         flex: 1,
+                        flexDirection:'row',
                         fontSize: SIZES.h2
                     }}
+                    onPress={() => navigation.replace("Category")}
                 >
-                    Categories
-                </Text>
-                <Button
-                title="Buton"
-                onPress={() => navigation.replace("Category")}
-                ></Button>        
-                <TouchableOpacity>
                     <Text
-                        style={{
-                            color: COLORS.black,
-                            fontSize: SIZES.body4
-                        }}
-                    >
-                        View All
+                    style={{color: COLORS.lightGreen1}}
+                    >Categories
                     </Text>
+                    <Image
+                        source={icons.rightArrow}
+                        style={{
+                            width: 15,
+                            height: 15,
+                            tintColor: COLORS.lightGreen1,
+                            marginLeft:5,
+                            marginTop:3
+                        }}
+                    />
                 </TouchableOpacity>
 
             </View>

@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import { BlurView } from 'expo-blur'
 import { COLORS, FONTS, icons, SIZES } from '../constants';
-import { func } from 'prop-types';
 
 const HEADER_HEIGHT = 350;
 
